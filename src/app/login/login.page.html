@@ -1,0 +1,36 @@
+<ion-header>
+  <!-- Looks better without navbar
+    <ion-navbar>
+      <ion-title>WhatIsMyTime - Login</ion-title>
+    </ion-navbar>
+  -->
+  
+  </ion-header>
+  
+  <!-- Sample App Slider Demo, Login screen html-->
+  <ion-content class="bg-image no-scroll" padding>
+  
+    <h5  class="logotext" style="text-align: center;">WhatIsMyTime</h5>
+    <ion-img class="logo" width="160" height="160" src="../assets/imgs/Clock.png"></ion-img>
+      <ion-list>
+  
+          <ion-item class="login">
+            <ion-label floating>Username</ion-label>
+            <ion-input class="inputtext" type="text" #username></ion-input>
+          </ion-item>
+        
+          <ion-item class="login">
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" #password></ion-input>
+          </ion-item>
+        
+        </ion-list>
+  
+    <div padding>
+  
+        <button class="rounded" ion-button block (click)="signInUser()">Log in</button> <!-- Sample App Slider Demo, Log in-->
+        <button class="rounded" ion-button block (click)="push()">Don't have an account? Register</button> <!-- Sample App Slider Demo, Show register page-->
+  
+    </div>
+  </ion-content>
+  

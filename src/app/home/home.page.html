@@ -1,10 +1,29 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons start>
+        <ion-menu-toggle>
+            <ion-button>
+              <ion-icon name="menu"></ion-icon>
+            </ion-button>
+          </ion-menu-toggle>
+    </ion-buttons>
     <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
+ 
+<ion-content class="bg-image no-scroll" padding> <!-- Slider Demo, Sample App, home page, display some data and fancy image based on time of day -->
+<p style="text-align: center;" class="fronttext">  Current time in {{ this.mySelection.kind }} is</p>
+    
+<p style="text-align: center;" class="watchtext">{{ timeZone() | date: 'H:mm:ss' }}</p>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+<ion-img class="decoimg" width="100" height="100" src={{source()}}></ion-img>
+
+<ion-item class="roundedlist">
+
+  <ion-select class="selectlist" interface="action-sheet" [(ngModel)]="mySelection.kind" (ionChange)='translateName(myOptions, mySelection.kind)'>
+    <ion-select-option *ngFor="let item of myOptions">{{item.Name}}</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
 </ion-content>

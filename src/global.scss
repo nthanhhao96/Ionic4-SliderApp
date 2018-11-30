@@ -9,3 +9,79 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+
+@font-face { //custom fonts ...yay!
+    font-family: Anton;
+    src: url('./assets/fonts/Anton-Regular.ttf') format("truetype");
+}
+
+  @font-face { //custom fonts ...yay!
+    font-family: BlackHanSans;
+    src: url('./assets/fonts/BlackHanSans-Regular.ttf') format("truetype");
+}
+
+@font-face { //custom fonts ...yay!
+    font-family: Open-sans;
+    src: url('./assets/fonts/OpenSans-Regular.ttf') format("truetype");
+    
+}
+    * { //This really doesn't need to be applied for each font, once is enough to apply it globally.
+        font-family: Open-sans;
+    }
+
+    .toolbar-background { //custom toolbar color
+        background: transparent;
+        background-color:rgba(0,0,0,0.75);
+        
+    }
+
+
+    .rounded { //rounded fancy buttons
+        border-radius: 25px;
+        width:100%;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+        background:rgba(255, 255, 255,0.1);
+        font-size:16px;
+        
+        text-shadow: 1px 1px #494949;
+    }
+
+    .rounded:hover {
+        background:rgba(255, 255, 255,0.3) !important;  
+    }
+
+
+
+    .login {
+        width:75%;
+        background:rgba(0, 0, 0,0.7);
+        margin:auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+        color: whitesmoke;
+        
+       }
+
+       .tabs-md .tab-button { //custom tab coloring
+        color: white !important;
+       }
+       
+         //selected color
+        .tabs-md .tab-button[aria-selected=true] {
+        // color: #fce515 !important;
+        background-color: #181818;
+        }
+ 
+         .tab-button {
+           color: white !important;
+            background-color: #000000;
+          //  background:rgba(255, 255, 255,0.1);
+        }
+
+      
+
+
+  

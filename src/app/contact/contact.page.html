@@ -1,23 +1,47 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Contact
-    </ion-title>
+    <ion-buttons start>
+        <ion-menu-toggle>
+            <ion-button>
+              <ion-icon name="menu"></ion-icon>
+            </ion-button>
+          </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title>Custom places</ion-title>
   </ion-toolbar>
 </ion-header>
+ 
+<ion-content class="bg-image no-scroll" padding>
 
-<ion-content>
+  <p>List of your current places:</p>
+
   <ion-list>
-    <ion-list-header>
-      <ion-label>
-        Follow us on Twitter
-      </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-label>
-        <ion-icon name="logo-ionic" slot="start"></ion-icon>
-        @ionicframework
-      </ion-label>
+
+    <ion-item class="transparent" *ngFor="let item of items | async">
+      <div class="row ">
+        <div class="col ">
+         <input type="text" #updatetext [value]="item.myObj.Name" /> 
+        </div>  
+        <div class="col">
+      <input type="text" #updateval [value]="item.myObj.Zone" /> 
+        </div>
+        <div class="col">
+      <button (click)="updateItem(item.key, updatetext.value, updateval.value)">Update</button>
+      <button (click)="deleteItem(item.key)">Delete</button>
+    </div>
+    </div>
     </ion-item>
+    
   </ion-list>
+  
+  <div class="col transparentbox">
+  <ion-label class="white">Location</ion-label>
+  <input type="text" #newitem />
+  <ion-label class="white">Time zone (GMT)</ion-label> 
+  <input type="number" #newnum />
+  <button (click)="addItem(newitem.value, newnum.value)">Add</button>
+  <button (click)="deleteEverything()">Delete All</button> 
+</div>
+  
+
 </ion-content>

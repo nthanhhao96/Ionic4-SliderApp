@@ -1,1 +1,59 @@
 
+ion-content {
+    --background: url('../../assets/imgs/tower-bridge.jpg') no-repeat center / cover;
+}
+
+.watchtext {
+  
+    color:whitesmoke;
+    font-size: 42px;
+    font-family: BlackHanSans;
+    text-shadow: 4px 4px #141414;
+
+}
+
+.fronttext {
+  
+    color:whitesmoke;
+    font-size: 30px;
+    font-family: Open-Sans;
+    text-shadow: 4px 4px #141414;
+
+}
+
+.decoimg {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 70px;
+    margin-top: 10px;
+    background: transparent;
+}
+
+p {
+    margin-top: 10px;       
+    margin-bottom: 10px;     
+}
+
+
+
+  .roundedlist { //rounded fancy buttons
+    border-radius: 25px;
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background:rgba(255, 255, 255,0.1);
+    font-size:16px;
+    color:whitesmoke;   
+    text-shadow: 1px 1px #494949;
+}
+  .selectlist {
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 280px;
+    font-size: 12px;
+  }
+
+  .item-complex .item-content { background-color: #262B32 !important; }
